@@ -41,5 +41,3 @@ Invoke-RestMethod http://localhost:3000/posts
 - The app listens on port `3000` by default (`server.js`).
 - `views/index.ejs` currently uses `<%= locals.text12312 %>` but `server.js` renders with `{ text: "World" }` — this will print `undefined` in the view. Fix by either changing the view to `<%= text %>` or updating the render call to `res.render('index', { text12312: 'World' })`.
 - `nodemon` runs via the `devStart` script and is a devDependency — ensure dev dependencies are installed (`npm install`).
-
-If you want, I can start the server here and confirm the endpoints respond as expected.
